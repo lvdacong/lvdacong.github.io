@@ -12,30 +12,50 @@ window.addEventListener('load', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navbar = document.querySelector('.navbar');
     
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
+    if (navToggle && navMenu) {
+        // 点击汉堡菜单切换
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
             
-            // 汉堡菜单动画
-            this.classList.toggle('active');
+            // 防止页面滚动（菜单打开时）
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // 点击菜单项后关闭
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', function(e) {
+            if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // 阻止菜单内部点击事件冒泡
+        navMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
     }
     
-    // 点击菜单项后关闭移动端菜单
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            if (navToggle) {
-                navToggle.classList.remove('active');
-            }
-        });
-    });
-    
     // 滚动时导航栏效果
     let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
