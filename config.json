@@ -1,0 +1,26 @@
+{
+  "personalInfo": {
+    "name": "吕德淞",
+    "nameEn": "LYU DESONG",
+    "birth": "2001.07",
+    "phone": "18621506297",
+    "email": "lvdacong@sjtu.edu.cn",
+    "address": "上海市闵行区东川路800号",
+    "avatar": "avatar.png"
+  },
+  "theme": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#1e40af",
+    "accentColor": "#3b82f6"
+  },
+  "features": {
+    "enableDarkMode": true,
+    "enablePrint": true,
+    "enableViewCount": true,
+    "enableAnimations": true
+  },
+  "seo": {
+    "keywords": "吕德淞,简历,船舶工程,算法工程师,上海交通大学",
+    "description": "吕德淞的个人简历 - 船舶与海洋工程硕士，算法工程师，上海交通大学"
+  }
+}
