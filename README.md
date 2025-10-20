@@ -1,11 +1,8 @@
 # 吕德淞 - 个人简历网页
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+在线访问：**[https://lvdacong.github.io](https://lvdacong.github.io)**
 
-这是一个现代化、响应式的个人简历网页项目，采用纯前端技术栈，无需服务器即可运行。
+这是一个现代化、响应式的个人简历网页，采用纯前端技术栈，完美支持移动端和桌面端。
 
 ## ✨ 特性
 
@@ -138,15 +135,13 @@ python -m http.server 8000
 
 ```
 简历网页/
-├── index.html          # 主页面（HTML结构）
-├── style.css           # 样式文件（所有CSS）
-├── script.js           # 交互脚本（JavaScript）
-├── avatar.png          # 个人头像（需自行添加）
-├── config.json         # 配置文件（可选）
+├── index.html          # 主页面
+├── style.css           # 样式文件
+├── script.js           # 交互脚本
+├── avatar.png          # 个人头像
+├── deploy.ps1          # 快速部署脚本
 ├── README.md           # 项目说明
-├── CHANGELOG.md        # 更新日志
-├── 部署指南.md         # 详细部署教程
-└── .gitignore          # Git忽略文件
+└── .gitignore          # Git配置
 ```
 
 ## 🛠️ 技术栈
@@ -218,21 +213,28 @@ var _hmt = _hmt || [];
 </script>
 ```
 
-## 📝 待办事项
+## � 更新网站
 
-- [ ] 多语言版本（中英文切换）
-- [ ] 主题切换（亮色/暗色模式）
-- [ ] 导出PDF功能增强
-- [ ] 添加博客模块
-- [ ] 作品集展示页面
+修改内容后，使用以下任一方式更新：
 
-## 🤝 贡献
+**方法1：使用脚本**
+```powershell
+.\deploy.ps1
+```
 
-欢迎提交 Issue 和 Pull Request！
+**方法2：使用命令行**
+```bash
+git add .
+git commit -m "更新内容"
+git push
+```
 
-## 📄 许可证
+**方法3：使用GitHub Desktop**
+- 打开GitHub Desktop
+- 提交更改
+- 点击 "Push origin"
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+等待1-2分钟，网站自动更新。
 
 ## 📮 联系方式
 
