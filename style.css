@@ -893,14 +893,44 @@ body {
         flex-direction: column;
         padding: 1rem;
         box-shadow: var(--shadow-lg);
+        z-index: 999;
+        gap: 0.5rem;
     }
 
     .nav-menu.active {
-        display: flex;
+        display: flex !important;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+        background: var(--bg-light);
     }
 
     .nav-toggle {
         display: flex;
+    }
+
+    /* 汉堡菜单动画 */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 
     .hero-title {
@@ -965,6 +995,19 @@ body {
 
     .section {
         padding: 3rem 0;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-contact {
+        font-size: 0.9rem;
+    }
+
+    .contact-item {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
