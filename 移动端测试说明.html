@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2563eb;
+        }
+        .test-section {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #1e40af;
+        }
+        .fix-list {
+            background: white;
+            padding: 15px;
+            border-left: 4px solid #10b981;
+            margin: 15px 0;
+        }
+        .fix-list h3 {
+            color: #10b981;
+            margin-top: 0;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        code {
+            background: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>📱 移动端菜单修复说明</h1>
+
+    <div class="test-section">
+        <h2>🎉 已修复的问题</h2>
+        <div class="fix-list">
+            <h3>✅ 修复内容：</h3>
+            <ul>
+                <li><strong>菜单层级问题</strong>：添加了 z-index 确保菜单在最上层显示</li>
+                <li><strong>菜单间距</strong>：优化了菜单项之间的间距，更易点击</li>
+                <li><strong>点击区域</strong>：扩大了菜单链接的点击区域</li>
+                <li><strong>汉堡菜单动画</strong>：添加了汉堡图标的旋转动画（X形状）</li>
+                <li><strong>悬停效果</strong>：菜单项悬停时会有背景色变化</li>
+                <li><strong>强制显示</strong>：使用 !important 确保菜单在激活时一定显示</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 如何测试</h2>
+        <p><strong>方法1：在手机上测试（推荐）</strong></p>
+        <ol>
+            <li>等待 1-2 分钟让 GitHub Pages 更新</li>
+            <li>在手机浏览器中访问：<br><code>https://lvdacong.github.io</code></li>
+            <li>点击右上角的汉堡菜单图标（三条横线）</li>
+            <li>菜单应该从下方滑出，显示所有导航项</li>
+        </ol>
+
+        <p><strong>方法2：在电脑上模拟移动端</strong></p>
+        <ol>
+            <li>打开 Chrome 浏览器</li>
+            <li>按 <code>F12</code> 打开开发者工具</li>
+            <li>按 <code>Ctrl + Shift + M</code> 切换到移动设备模拟</li>
+            <li>选择设备：iPhone 12 Pro 或其他手机型号</li>
+            <li>刷新页面测试菜单功能</li>
+        </ol>
+    </div>
+
+    <div class="note">
+        <h3>⏰ 重要提示</h3>
+        <p>GitHub Pages 需要 <strong>1-2 分钟</strong>来部署更新。如果立即访问还是旧版本，请：</p>
+        <ul>
+            <li>等待 2 分钟后再测试</li>
+            <li>强制刷新页面（手机：下拉刷新；电脑：Ctrl + F5）</li>
+            <li>清除浏览器缓存</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🎯 预期效果</h2>
+        <ul>
+            <li>✅ 点击汉堡图标，菜单从上方滑下</li>
+            <li>✅ 菜单项垂直排列，每项占满宽度</li>
+            <li>✅ 点击菜单项后，菜单自动收起</li>
+            <li>✅ 汉堡图标变成 X 形状（打开状态）</li>
+            <li>✅ 菜单项悬停时有背景色</li>
+            <li>✅ 点击菜单外部区域也能关闭菜单</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🔗 快速链接</h2>
+        <a href="https://lvdacong.github.io" class="button" target="_blank">📱 访问网站</a>
+        <a href="https://github.com/lvdacong/lvdacong.github.io" class="button" target="_blank">📦 GitHub仓库</a>
+        <a href="https://github.com/lvdacong/lvdacong.github.io/actions" class="button" target="_blank">🔄 查看部署状态</a>
+    </div>
+
+    <div class="test-section">
+        <h2>❓ 如果还有问题</h2>
+        <p>请提供以下信息：</p>
+        <ul>
+            <li>您使用的手机型号和浏览器</li>
+            <li>具体的问题描述（菜单完全不显示？还是显示但位置不对？）</li>
+            <li>可能的话，提供截图</li>
+        </ul>
+        <p>我会继续帮您优化！</p>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <div style="text-align: center; color: #6b7280;">
+        <p>如有问题，请联系：lvdacong@sjtu.edu.cn</p>
+        <p style="font-size: 0.9em;">修复时间：2025年10月21日</p>
+    </div>
+</body>
+</html>
